@@ -40,9 +40,9 @@ launch_key = 7
 stat_key_index = [3,4,8,9,0,1,5,6,12,2]
 # Deck Settings
 brightness = 50
-deckid = r"\\?\hid#vid_0fd9&pid_0060#7&2733624f&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}"
-cc1_host = "wgme-ibm-cc1"
-cc2_host = "wgme-ibm-cc2"
+deckid = r"STREAMDECK ID BETWEEN QUOTES - SEE README"
+cc1_host = "WATSON 1 HOST/IP BETWEEN QUOTES"
+cc2_host = "WATSON 2 HOST/IP BETWEEN QUOTES"
 
 #Grabs session_status from Watson API
 def api_con(host):
