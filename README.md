@@ -1,6 +1,5 @@
 # Streamdeck Watson Control
-#### Contact Info
-#### lpower@sbgtv.com – Liam Power - 207-228-7650
+#### Contact Info: Liam Power - lpower@sbgtv.com - 207-228-7650
 
 ## Purpose:
 This script allows you to control your Watson closed captioning systems via an ElGato Streamdeck. Functionality includes starting captioning, stopping captioning, and viewing the current status of the captioner. 
@@ -15,7 +14,7 @@ This script allows you to control your Watson closed captioning systems via an E
  
 
 ## Installation 
-This has several dependencies. Pillow and HIDAPI have installation instructions baked into the Streamdeck library instructions.:
+This has several dependencies. Pillow and HIDAPI have installation instructions baked into the Streamdeck library instructions:
 - Python 3.9 – May work with older Python 3 versions, just untested.
 - Python-Elgato-Streamdeck Library – This can be installed via npm. Documentation can be found at the link. This allows easy interaction with the Streamdeck.
 - Pillow – Also installable via npm. This is used to make the images for the key tiles.
@@ -48,7 +47,7 @@ Ensure all the above are installed. You should also have a folder with the scrip
 4.	Fill in the label with what you want it to be called.
 5.	Click the arrow over the image, choose from file, and select the SWCLogo image.
  
-Known Issues:
+## Known Issues:
 - Currently only allows for two Watsons.
   - Will be fixed in the dynamic allocation update.
 - Currently only allows for the 15 key Streamdeck. 
@@ -59,7 +58,7 @@ Future Plans:
 
 
 
-License:
+## Licensing Info:
 Python-Elgato-Streamdeck used under MIT License:
 © Copyright 2020, Dean Camera
 Permission to use, copy, modify, and distribute this software
