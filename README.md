@@ -24,7 +24,8 @@ This has several dependencies. Pillow and HIDAPI have installation instructions 
 
 Ensure all the above are installed. You should also have a folder with the script and an ‘Assets’ subfolder that contains 9 PNG images. The script is relative, so place the folder wherever you like before doing the following:
 
-**Variable Setup** – This will configure the Streamdeck for your environment, and can be done in any text editor of your choice. You should see the section starting with ‘Image Locations’ near the top of the file. For the key sections, note that the keys are in order left to right and top to bottom, starting with 0, so the top left key is 0 in the above image, and the bottom right one is 14. Most key types only allow one of those keys at a time, with the exception of the status keys.
+### Variable Setup
+This will configure the Streamdeck for your environment, and can be done in any text editor of your choice. You should see the section starting with ‘Image Locations’ near the top of the file. For the key sections, note that the keys are in order left to right and top to bottom, starting with 0, so the top left key is 0 in the above image, and the bottom right one is 14. Most key types only allow one of those keys at a time, with the exception of the status keys.
 1.	ASSETS_PATH – This is the folder in the same directory as the script that stores the images. To change the name of the folder used, replace the Assets inside the quotes with the new folder name.
 2.	exit_key_index – This is the location of the ‘Exit’ key.
 3.	cc1on_key_index – This is the location of the key to turn on Watson 1.
@@ -40,7 +41,8 @@ Ensure all the above are installed. You should also have a folder with the scrip
 13.	cc1_host – This is the Name/IP of the first Watson.
 14.	cc2_host – This is the Name/IP of the second Watson.
  
-**(Optional) Streamdeck Application** - You should now be able to run the script manually via the command line, and from the panel thereafter. However, if you want to have the panel initially populate with the launch button, you can do so using the Streamdeck application.
+### (Optional) Streamdeck Application
+You should now be able to run the script manually via the command line, and from the panel thereafter. However, if you want to have the panel initially populate with the launch button, you can do so using the Streamdeck application.
 1.	First, search for ‘open’ in the search box.
 2.	Drag ‘open’ onto the button you plan to use as the launch button. By default, this is the middle one.
 3.	Click the three dots to the right of the box, and locate the script py file.
