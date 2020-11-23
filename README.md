@@ -2,25 +2,28 @@
 #### Contact Info: Liam Power - lpower@sbgtv.com - 207-228-7650
 
 ## Purpose:
-This script allows you to control your Watson closed captioning systems via an ElGato Streamdeck. Functionality includes starting captioning, stopping captioning, and viewing the current status of the captioner. 
+This script allows you to control your Watson closed captioning systems via an [ElGato Streamdeck](https://www.elgato.com/en/gaming/stream-deck). Functionality includes starting captioning, stopping captioning, and viewing the current status of the captioner. 
 ## Operation:
-**Panel usage – See image on next page**
+**Panel usage – See Image Following**
 1.	Closed Caption Status Indicator: Illuminates green when captions are running, as seen on Watson 1 on the right, and red when captions are not running, as seen on Watson 2 on the left. 
 2.	Start Closed Captioning: Starts the closed captioning on the Watson, with the numbers corresponding to the Watson unit. If captioning is already running, this has no effect.
 3.	Stop Closed Captioning: Stopss the closed captioning on the Watson, with the numbers corresponding to the Watson unit. If captioning is not running, this has no effect
 4.	Exit: This exits out of the python script, leaving the ‘Launch Watson Control’ icon in the middle active. Useful for debugging or restarting in case of issues.
 5.	Launch Watson Control: This launches the Python script that controls the system. If the program exits cleanly, this button will remain after exit, and if you’ve also installed the ElGato Streamdeck management application, you can set it up to ensure it is set to that location through there as well.
 6.	Station Logo: This has no functionality beyond looking pretty.
+
+![Panel Usage](/Assets/StreamDeckHowTo.png)
  
 
 ## Installation 
+### Dependencies 
 This has several dependencies. Pillow and HIDAPI have installation instructions baked into the Streamdeck library instructions:
-- Python 3.9 – May work with older Python 3 versions, just untested.
-- Python-Elgato-Streamdeck Library – This can be installed via npm. Documentation can be found at the link. This allows easy interaction with the Streamdeck.
-- Pillow – Also installable via npm. This is used to make the images for the key tiles.
-- HIDAPI – Enables interaction with HID devices. Used by the Streamdeck library to communicate with the deck. If using Windows, ensure you use the correct 64/32 bit.
-- Requests – This handles pulling from the Watson API.
-- (Optional) ElGato Streamdeck Software – This is not strictly necessary, it is simply useful for ensuring the launch button is always on the deck.
+- [Python 3.9](https://www.python.org/) – May work with older Python 3 versions, just untested.
+- [Python-Elgato-Streamdeck Library](https://python-elgato-streamdeck.readthedocs.io/en/stable/index.html) – This can be installed via npm. Documentation can be found at the link. This allows easy interaction with the Streamdeck.
+- [Pillow](https://pillow.readthedocs.io/en/stable/) – Also installable via npm. This is used to make the images for the key tiles.
+- [HIDAPI](https://github.com/libusb/hidapi) – Enables interaction with HID devices. Used by the Streamdeck library to communicate with the deck. If using Windows, ensure you use the correct 64/32 bit.
+- [Requests](https://requests.readthedocs.io/en/master/) – This handles pulling from the Watson API.
+- (Optional) [ElGato Streamdeck Software](https://www.elgato.com/en/gaming/downloads) – This is not strictly necessary, it is simply useful for ensuring the launch button is always on the deck.
 
 Ensure all the above are installed. You should also have a folder with the script and an ‘Assets’ subfolder that contains 9 PNG images. The script is relative, so place the folder wherever you like before doing the following:
 
@@ -38,6 +41,9 @@ This will configure the Streamdeck for your environment, and can be done in any 
 10.	stat_key_index – Any key added to this list will be created without any text labels, just the image.
 11.	brightness – The brightness of the deck, from 0 to 100. This and the Streamdeck application will override each other, so if using both, ensure they’re set to the same brightness.
 12.	deckid – This is the most important one to change! When you run the script, it will show you a list of all the connected Streamdecks, but will only connect to the deck with the id set here. This means you’ll have to run it once, copy the deck id into the script, and then run it again to actually work. The image below shows you where the id to copy is. Replace only the part between the quotes in the script, ensure the r remains outside them.
+
+![Deck ID Location](/Assets/DeckId.png)
+
 13.	cc1_host – This is the Name/IP of the first Watson.
 14.	cc2_host – This is the Name/IP of the second Watson.
  
@@ -49,6 +55,8 @@ You should now be able to run the script manually via the command line, and from
 4.	Fill in the label with what you want it to be called.
 5.	Click the arrow over the image, choose from file, and select the SWCLogo image.
  
+![Streamdeck Application Setup](/Assets/StreamDeckApp.png)
+
 ## Known Issues:
 - Currently only allows for two Watsons.
   - Will be fixed in the dynamic allocation update.
