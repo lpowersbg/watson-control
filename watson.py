@@ -1,9 +1,6 @@
 import telnetlib
 import requests
 
-cc1_host = "wgme-ibm-cc1"
-cc2_host = "wgme-ibm-cc2"
-
 def api_con(host):
     try:
         respwat = requests.get('http://' + host + ':8000/session_status')
